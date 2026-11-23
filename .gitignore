@@ -1,0 +1,5 @@
+# Teacher-only material (answer keys, raw data, scripts): never publish
+teacher/
+
+# macOS
+.DS_Store
