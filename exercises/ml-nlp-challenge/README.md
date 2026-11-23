@@ -11,7 +11,8 @@ There are five classes: `left`, `lean left`, `center`, `lean right`, `right`.
 - **Teams:** up to 2 students.
 - **In class (3 hours):** a runnable prototype that trains a model and predicts on the test set.
   About 15 minutes before the end, each team announces its best model and its validation macro-F1.
-- **Afterwards (48 hours):** refine your work, without instructor input, and submit your repository.
+- **Afterwards:** refine your work, without instructor input, and submit it on Lola by
+  **25 November 2026, 23:59** (one submission per group).
 
 ## Data
 
@@ -47,26 +48,17 @@ Columns: `id`, `Title`, `Text`, `Bias` (`Bias` only in the training set).
   (fix the random seed).
 - Using any other copy of this dataset or of its labels is **cheating**. Notebooks may be re-run to check
   that they reproduce the submitted predictions.
-- Document any external resource you use (pre-trained models, embeddings, extra libraries) in your README.
-
-## Deliverables
-
-A GitHub repository containing:
-
-1. **The completed notebook**, runnable top to bottom.
-2. **`data/test_dataset_predicted.csv`**: `test_dataset.csv` with an added `Bias` column holding your
-   prediction for every row (the notebook writes it for you).
-3. **`README.md`**: description of your approach, setup instructions, results (validation scores of
-   the models you tried), usage.
-4. **`requirements.txt`**: `pip freeze > requirements.txt`.
-
-Do not commit the datasets if your repository is public.
+- Document any external resource you use (pre-trained models, embeddings, extra libraries) in your notebook.
 
 ## Submission
 
-1. Push your work to a GitHub repository (it can be private) and add the instructor (`AugusteDebroise`) as a collaborator.
-2. Tag the final commit `v1.0-final`.
-3. Email the repository link before the deadline.
+**Deadline: 25 November 2026, 23:59**, on **Lola**, **one submission per group**. Upload two files:
+
+1. **The completed notebook** (`.ipynb`), runnable top to bottom, with the team members' names at the top.
+2. **`test_dataset_predicted.csv`**: `test_dataset.csv` with an added `Bias` column holding your
+   prediction for every row (the notebook writes it to `data/` for you).
+
+You do not need to include the training and test datasets.
 
 ## Evaluation
 
@@ -74,8 +66,8 @@ Do not commit the datasets if your repository is public.
   with the baseline. Test rows that contain no usable article are not graded.
 - **Correctness:** the code runs end to end and reproduces the submitted predictions.
 - **Pipeline completeness:** cleaning, preprocessing, training, prediction, saved model.
-- **Documentation and reproducibility:** clear README, `requirements.txt`, meaningful commit history,
-  readable notebook (Markdown cells explaining *why*, one logical step per cell).
+- **Documentation and reproducibility:** package versions recorded, readable notebook
+  (Markdown cells explaining *why*, one logical step per cell).
 - **Critical thinking:** short discussion of how the labels were produced, what your model may really be
   learning, the limits of the data and possible misuse.
 
@@ -84,4 +76,4 @@ Do not commit the datasets if your repository is public.
 - Start from the baseline, beat it, then try more complex models if time allows.
 - Keep a table of what you tried and the validation score of each attempt.
 - Use `sklearn.pipeline.Pipeline` so that the same preprocessing is applied at training and prediction time.
-- Remove stray prints and debugging code before the final commit.
+- Remove stray prints and debugging code before submitting.
